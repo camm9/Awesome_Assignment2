@@ -6,7 +6,29 @@ public class Person {
 	private String image;
 	private String name;
 	private int age;
+	private String rollName;
+	private String indeedUrl;
+	private String githubUrl;
 	
+	public String getRollName() {
+		return rollName;
+	}
+	public void setRollName(String rollName) {
+		this.rollName = rollName;
+	}
+	public String getIndeedUrl() {
+		return indeedUrl;
+	}
+	public void setIndeedUrl(String indeedUrl) {
+		this.indeedUrl = indeedUrl;
+	}
+	public String getGithubUrl() {
+		return githubUrl;
+	}
+	public void setGithubUrl(String githubUrl) {
+		this.githubUrl = githubUrl;
+	}
+
 	public String getBio() {
 		return bio;
 	}
@@ -32,16 +54,29 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	Person(){
-		
-	}
-	
-	Person(String bio, String image, String name, int age){
+
+//Edi: Constructor full
+	public Person(String bio, String image, String name, int age, String rollName, String indeedUrl, String githubUrl) {
+		super();
 		this.bio = bio;
 		this.image = image;
 		this.name = name;
 		this.age = age;
+		this.rollName = rollName;
+		this.indeedUrl = indeedUrl;
+		this.githubUrl = githubUrl;
 	}
+//Edi: Constructor empty
+	public Person(){
+		
+	}
+	
+	//Comment out person java old constructor
+//	Person(String bio, String image, String name, int age){
+//		this.bio = bio;
+//		this.image = image;
+//		this.name = name;
+//		this.age = age;
+//	}
 
 }
