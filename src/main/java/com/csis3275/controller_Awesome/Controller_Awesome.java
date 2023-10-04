@@ -21,11 +21,10 @@ public class Controller_Awesome {
 		wva_06_object.setBio("Entrepreneur, passionate, enthusiastic with high knowledge of IT and good leadership skills. In continuous professional training. Always adaptable and with all the desire to grow and learn.");	
 	}
 	
-//	@GetMapping("/")
-//	public String renderHome(Model model) {
-//		model.addAttribute("catherineAttribute", catherine);
-//		return "home";
-//	}
+	@GetMapping("/")
+	public String renderHome(Model model) {
+		return "home";
+	}
 	
 //	@GetMapping("/catherine")
 //	public String renderCatherine(Model model) {
