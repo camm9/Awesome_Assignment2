@@ -1,6 +1,6 @@
 package com.csis3275.model_Awesome;
 
-public class TeamMember_AWESOME {
+public class TeamMember_awesome {
 	
 	private String bio;
 	private String image;
@@ -56,7 +56,7 @@ public class TeamMember_AWESOME {
 	}
 
 //Edi: Constructor full
-	public TeamMember_AWESOME(String bio, String image, String name, int age, String rollName, String indeedUrl, String githubUrl) {
+	public TeamMember_awesome(String bio, String image, String name, int age, String rollName, String indeedUrl, String githubUrl) {
 		super();
 		this.bio = bio;
 		this.image = image;
@@ -67,7 +67,7 @@ public class TeamMember_AWESOME {
 		this.githubUrl = githubUrl;
 	}
 //Edi: Constructor empty
-	public TeamMember_AWESOME(){
+	public TeamMember_awesome(){
 		
 	}
 	

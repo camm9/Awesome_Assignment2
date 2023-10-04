@@ -4,13 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.csis3275.model_Awesome.TeamMember_AWESOME;
+import com.csis3275.model_Awesome.TeamMember_awesome;
 
 @Controller
 public class Controller_Awesome {
 	
 	
-	private TeamMember_AWESOME wva_06_object = new TeamMember_AWESOME();
+	private TeamMember_awesome wva_06_object = new TeamMember_awesome();
 	
 	public Controller_Awesome() {
 		
