@@ -6,46 +6,83 @@ import org.springframework.web.bind.annotation.GetMapping;
 import csis3275.model_Awesome.Person;
 import csis3275.model_Awesome.Student_wva_06;
 
+import com.csis3275.model_Awesome.TeamMember_awesome;
+
 @Controller
 public class Controller_Awesome {
-	private Student_wva_06 wva_06_object = new Student_wva_06();
-	private Student_wva_06 catherine = new Student_wva_06();
-//	private Student_wva_06 catherine = new Student_wva_06("Cybersecurity student at Douglas College in New Westminister, BC.", "assets/images/images/catherine_selfie.jpg", "Catherine Methven", 29, "Dev/Security Analyst", "https://www.linkedin.com/in/cathmethven/", "https://github.com/camm9");
-//	public Student_wva_06(String bio, String image, String name, int age, String rollName,  String indeedUrl, String githubUrl)
+
+	private TeamMember_awesome wva_06_object = new TeamMember_awesome();
+	private TeamMember_awesome ech_72_object = new TeamMember_awesome();
+	private TeamMember_awesome cme_00_object = new TeamMember_awesome();
+
 	public Controller_Awesome() {
-		
-		wva_06_object.setIndeedUrl("https://www.linkedin.com/in/washington-eduardo-valencia-1ab8aa189/");
+
+		wva_06_object.setLinkedinUrl("https://www.linkedin.com/in/washington-eduardo-valencia-1ab8aa189/");
 		wva_06_object.setGithubUrl("https://github.com/educristo777");
 		wva_06_object.setAge(38);
-		wva_06_object.setRollName("Dev/Ops");
+		wva_06_object.setRoleName("Dev/Ops");
 		wva_06_object.setName("Washington Valencia");
 		wva_06_object.setImage("assets/images/images/wva-06.jpg");
-		wva_06_object.setBio("Entrepreneur, passionate, enthusiastic with high knowledge of IT and good leadership skills. In continuous professional training. Always adaptable and with all the desire to grow and learn.");	
-	
-		catherine.setIndeedUrl("https://www.linkedin.com/in/cathmethven/");
-		catherine.setGithubUrl("https://github.com/camm9");
-		catherine.setAge(29);
-		catherine.setRollName("Dev/Security Analyst");
-		catherine.setName("Catherine Methven");
-		catherine.setImage("assets/images/images/catherine_selfie.jpg");
-		catherine.setBio("Cybersecurity student at Douglas College, New Westminster, BC");	
-	
+		wva_06_object.setBio(
+				"Entrepreneur, passionate, enthusiastic with high knowledge of IT and good leadership skills. In continuous professional training. Always adaptable and with all the desire to grow and learn.");
+		InstantiateEdiObject();
+		InstantiateCatherineObject();
+	}
+
+	private void InstantiateEdiObject() // move Edison instantiation down for better code readability
+	{
+		ech_72_object.setLinkedinUrl("https://www.linkedin.com/in/wai-cheung-chan-441687b0");
+		ech_72_object.setGithubUrl("https://github.com/WCEdison");
+		ech_72_object.setAge(28);
+		ech_72_object.setRoleName("Lead/Dev/Ops");
+		ech_72_object.setName("Edison CHAN");
+		ech_72_object.setImage("assets/images/images/ech-72.jpg");
+		ech_72_object.setBio(
+				"A energetic and socialable programmer and entrepreneur. Co-founder and former chief engineer of Ed-Tech Startup Dot Dot Fire Limited. Welcome challenges or failings as long as he can fail forward.");
+
 	}
 	
+	private void InstantiateCatherineObject() {
+		
+		cme_00_object.setLinkedinUrl("https://www.linkedin.com/in/cathmethven");
+		cme_00_object.setGithubUrl("https://github.com/camm9");
+		cme_00_object.setAge(28);
+		cme_00_object.setRoleName("Dev/Security Analyst");
+		cme_00_object.setName("Catherine Methven");
+		cme_00_object.setImage("assets/images/images/catherine_selfie.jpg");
+		cme_00_object.setBio(
+				"Cybersecurity student at Douglas College in New Westminister, BC. Always curious and eager to learn new skills.");
+
+		
+	}
+
 	@GetMapping("/")
 	public String renderHome(Model model) {
+		model.addAttribute("wvaobj", wva_06_object);
+		model.addAttribute("echobj", ech_72_object);
+		model.addAttribute("cmeobj", cme_00_object);
 		return "home";
 	}
 	
 	@GetMapping("/catherine")
 	public String renderCatherine(Model model) {
-		model.addAttribute("catherineAttribute", catherine);
+		model.addAttribute("cmeobj", cme_00_object);
 		return "catherineView";
 }
 
+
 	@GetMapping("/wva-06")
 	public String renderProfilePage(Model model) {
+
 		model.addAttribute("wvaobj", wva_06_object);
+
 		return "wva-06";
 	}
+
+	@GetMapping("/ech-72")
+	public String renderEdiProfilePage(Model model) {
+		model.addAttribute("echobj", ech_72_object);
+		return "ech-72";
+	}
+
 }

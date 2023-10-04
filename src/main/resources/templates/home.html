@@ -26,7 +26,6 @@
 
 </head>
 
-
 <body class="header-sticky">
 
 	<div id="wrapper">
@@ -237,14 +236,14 @@
 
 					<div class="col-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
 
-						<a href="profile"
+						<a href="ech-72"
 							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
 							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/using_product.svg"
+								th:src="${echobj.image}"
 								alt="...">
 							<div class="px-2 py-3">
-								<h5 class="mb-0">Edison</h5>
-								<p class="mb-0">Lead / Dev /Ops</p>
+								<h5 class="mb-0" th:text = ${echobj.Name}></h5>
+								<p class="mb-0" th:text = ${echobj.roleName}></p>
 							</div>
 						</a>
 
@@ -255,9 +254,8 @@
 						<a href="catherine"
 							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
 							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/catherine_selfie.jpg"
-								alt="..."
-								height="150">
+								th:src="${cmeobj.image}"
+								alt="...">
 							<div class="px-2 py-3">
 								<h5 class="mb-0">Catherine</h5>
 								<p class="mb-0">Dev / Security Analyst</p>
@@ -416,7 +414,6 @@
 
 	<script src="assets/js/core.min.js"></script>
 
->>>>>>> wva_06_FEATURE
 </body>
 
 </html>

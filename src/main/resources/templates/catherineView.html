@@ -170,7 +170,7 @@
 						<div class="col-12 col-md-6 pb-3" data-aos="fade-in" data-aos-delay="200">
 
 							<!-- image -->
-							<img width="600" height="400" class="img-fluid rounded-xl" th:src="${catherineAttribute.image}" alt="...">
+							<img width="600" height="400" class="img-fluid rounded-xl" th:src="${cmeobj.image}" alt="...">
 
 							<!-- lines, looks like through a glass -->
 							<div class="absolute-full w-100 overflow-hidden opacity-6">
@@ -190,29 +190,29 @@
 									<!-- desktop side arrow : documentation/util-misc.html -->
 									<i class="arrow arrow-lg arrow-start mt-3 border-light d-none d-md-inline-block d-lg-inline-block d-xl-inline-block"></i>
 
-									<h1 class="h2-xs font-weight-medium mb-0" th:text=${catherineAttribute.Name}>
+									<h1 class="h2-xs font-weight-medium mb-0" th:text = ${cmeobj.Name}>
 										
 									</h1>
 									
-									<p class="h4 h6-xs font-weight-light mb-4" th:text=${catherineAttribute.rollName}>
+									<p class="h4 h6-xs font-weight-light mb-4" th:text = ${cmeobj.RoleName}>
 										
 									</p>
 
-<!--									<p class="lead max-w-600" th:text=${CatherineAttribute.bio}>-->
-<!--									</p>-->
+									<p class="lead max-w-600"  th:text = ${cmeobj.bio}>
+									</p>
 
 
 									<div class="mt-4"> 
 
 										
 
-<!--										<a th:href="${CatherineAttribute.indeedUrl}" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">-->
-<!--											<i class="fi fi-social-linkedin"></i> -->
-<!--										</a>-->
+										<a th:href="${cmeobj.linkedinUrl}" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">
+											<i class="fi fi-social-linkedin"></i> 
+										</a>
 
-<!--										<a th:href="${CatherineAttribute.githubUrl}" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">-->
-<!--											<i class="fi fi-social-github"></i> -->
-<!--										</a>-->
+										<a th:href="${cmeobj.githubUrl}" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">
+											<i class="fi fi-social-github"></i> 
+										</a>
 
 										
 
@@ -240,15 +240,15 @@
 			<section class="py-5">
 				<div class="container">
 
-<!--					<blockquote class="blockquote text-center" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">-->
-<!--						<p class="h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted" th:text="${CatherineAttribute.name}">-->
+					<blockquote class="blockquote text-center" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">
+						<p class="h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted" th:text="${cmeobj.name}">
 							
-<!--						</p>-->
+						</p>
 
-<!--						<footer class="blockquote-footer mt-4 fs--25 font-weight-light text-gray-500">-->
-<!--							<cite title="Source Title" th:text = "${CatherineAttribute.bio}"></cite>-->
-<!--						</footer>-->
-<!--					</blockquote>-->
+						<footer class="blockquote-footer mt-4 fs--25 font-weight-light text-gray-500">
+							<cite title="Source Title" th:text = "${cmeobj.bio}"></cite>
+						</footer>
+					</blockquote>
 
 				</div>
 			</section>

@@ -20,6 +20,7 @@
 .transform-3d-right .jarallax img {
   min-width: 100% !important; }
 
+<<<<<<< HEAD
 /*!
  * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
  *
@@ -27,6 +28,15 @@
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
+=======
+/*!
+ * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
+ *
+ * Copyright 2012-2020 SnapAppointments, LLC
+ * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
+ */
+
+>>>>>>> development
 @-webkit-keyframes bs-notify-fadeOut {
   0% {
     opacity: 0.9;
