@@ -1,7 +1,6 @@
 package csis3275.model_Awesome;
 
 public class Person {
-	
 
 	private String bio;
 	private String image;
@@ -35,13 +34,11 @@ public class Person {
 		this.age = age;
 	}
 	
-
-	public Person(){
+	Person(){
 		
 	}
 	
-	public Person(String bio, String image, String name, int age){
-
+	Person(String bio, String image, String name, int age){
 		this.bio = bio;
 		this.image = image;
 		this.name = name;
