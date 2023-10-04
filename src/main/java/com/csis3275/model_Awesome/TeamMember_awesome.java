@@ -13,14 +13,14 @@ public class TeamMember_awesome {
 	public String getRoleName() {
 		return roleName;
 	}
-	public void setRoleName(String rollName) {
-		this.roleName = rollName;
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
 	}
-	public String getlinkedinUrl() {
+	public String getLinkedinUrl() {
 		return linkedinUrl;
 	}
-	public void setlinkedinUrl(String indeedUrl) {
-		this.linkedinUrl = indeedUrl;
+	public void setLinkedinUrl(String linkedinUrl) {
+		this.linkedinUrl = linkedinUrl;
 	}
 	public String getGithubUrl() {
 		return githubUrl;

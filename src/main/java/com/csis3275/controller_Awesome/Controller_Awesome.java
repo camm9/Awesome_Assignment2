@@ -14,7 +14,7 @@ public class Controller_Awesome {
 	private TeamMember_awesome ech_72_object= new TeamMember_awesome();
 	public Controller_Awesome() {
 		
-		wva_06_object.setlinkedinUrl("https://www.linkedin.com/in/washington-eduardo-valencia-1ab8aa189/");
+		wva_06_object.setLinkedinUrl("https://www.linkedin.com/in/washington-eduardo-valencia-1ab8aa189/");
 		wva_06_object.setGithubUrl("https://github.com/educristo777");
 		wva_06_object.setAge(38);
 		wva_06_object.setRoleName("Dev/Ops");
@@ -27,7 +27,7 @@ public class Controller_Awesome {
 	
 	private void InstantiateEdiObject() //move Edison instantiation down for better code readability 
 	{
-		ech_72_object.setlinkedinUrl("https://www.linkedin.com/in/wai-cheung-chan-441687b0");
+		ech_72_object.setLinkedinUrl("https://www.linkedin.com/in/wai-cheung-chan-441687b0");
 		ech_72_object.setGithubUrl("https://github.com/WCEdison");
 		ech_72_object.setAge(28);
 		ech_72_object.setRoleName("Lead/Dev/Ops");
