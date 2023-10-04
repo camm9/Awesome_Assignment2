@@ -239,11 +239,11 @@
 						<a href="ech-72"
 							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
 							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/ech-72.jpg"
+								th:src="${echobj.image}"
 								alt="...">
 							<div class="px-2 py-3">
-								<h5 class="mb-0">Edison</h5>
-								<p class="mb-0">Lead / Dev /Ops</p>
+								<h5 class="mb-0" th:text = ${echobj.Name}></h5>
+								<p class="mb-0" th:text = ${echobj.roleName}></p>
 							</div>
 						</a>
 
