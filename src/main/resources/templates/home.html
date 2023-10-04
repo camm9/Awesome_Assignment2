@@ -255,8 +255,8 @@
 								th:src="${cmeobj.image}"
 								alt="...">
 							<div class="px-2 py-3">
-								<h5 class="mb-0">Catherine</h5>
-								<p class="mb-0">Dev / Security Analyst</p>
+								<h5 class="mb-0" th:text=${cmeobj.Name}></h5>
+								<p class="mb-0" th:text=${cmeobj.roleName}></p>
 							</div>
 						</a>
 
@@ -286,11 +286,11 @@
 						<a href="wva-06"
 							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
 							<img class="img-fluid rounded"
-								src="assets/images/images/wva-06.jpg"
+								th:src="${wvaobj.image}"
 								alt="...">
 							<div class="px-2 py-3">
-								<h5 class="mb-0">Washington Valencia</h5>
-								<p class="mb-0">Dev / Ops</p>
+								<h5 class="mb-0" th:text=${wvaobj.Name}></h5>
+								<p class="mb-0" th:text=${wvaobj.roleName}></p>
 							</div>
 						</a>
 
