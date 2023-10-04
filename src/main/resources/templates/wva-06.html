@@ -170,7 +170,7 @@
 						<div class="col-12 col-md-6 pb-3" data-aos="fade-in" data-aos-delay="200">
 
 							<!-- image -->
-							<img width="600" height="400" class="img-fluid rounded-xl" th:src="${image}" alt="...">
+							<img width="600" height="400" class="img-fluid rounded-xl" th:src="${wvaobj.image}" alt="...">
 
 							<!-- lines, looks like through a glass -->
 							<div class="absolute-full w-100 overflow-hidden opacity-6">
@@ -190,15 +190,15 @@
 									<!-- desktop side arrow : documentation/util-misc.html -->
 									<i class="arrow arrow-lg arrow-start mt-3 border-light d-none d-md-inline-block d-lg-inline-block d-xl-inline-block"></i>
 
-									<h1 class="h2-xs font-weight-medium mb-0" th:text = ${name}>
+									<h1 class="h2-xs font-weight-medium mb-0" th:text = ${wvaobj.Name}>
 										
 									</h1>
 									
-									<p class="h4 h6-xs font-weight-light mb-4" th:text = ${rollName}>
+									<p class="h4 h6-xs font-weight-light mb-4" th:text = ${wvaobj.rollName}>
 										
 									</p>
 
-									<p class="lead max-w-600"  th:text = ${bio}>
+									<p class="lead max-w-600"  th:text = ${wvaobj.bio}>
 									</p>
 
 
@@ -206,11 +206,11 @@
 
 										
 
-										<a th:href="${indeedUrl}" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">
+										<a th:href="${wvaobj.indeedUrl}" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">
 											<i class="fi fi-social-linkedin"></i> 
 										</a>
 
-										<a th:href="${githubUrl}" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">
+										<a th:href="${wvaobj.githubUrl}" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">
 											<i class="fi fi-social-github"></i> 
 										</a>
 
@@ -241,12 +241,12 @@
 				<div class="container">
 
 					<blockquote class="blockquote text-center" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">
-						<p class="h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted" th:text = ${bio}>
+						<p class="h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted" th:text="${wvaobj.name}">
 							
 						</p>
 
 						<footer class="blockquote-footer mt-4 fs--25 font-weight-light text-gray-500">
-							<cite title="Source Title" th:text = ${name}></cite>
+							<cite title="Source Title" th:text = "${wvaobj.bio}"></cite>
 						</footer>
 					</blockquote>
 
@@ -302,22 +302,22 @@
 
 						<div class="mt--12">
 
-							<a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
+							<a href="https://www.facebook.com/" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
 								rel="noopener" aria-label="facebook page">
 								<i class="fi fi-social-facebook"></i>
 							</a>
 
-							<a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
+							<a href="https://twitter.com/" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
 								rel="noopener" aria-label="twitter page">
 								<i class="fi fi-social-twitter"></i>
 							</a>
 
-							<a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
+							<a href="https://www.linkedin.com/" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
 								rel="noopener" aria-label="linkedin page">
 								<i class="fi fi-social-linkedin"></i>
 							</a>
 
-							<a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
+							<a href="https://youtube.com/" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
 								rel="noopener" aria-label="youtube page">
 								<i class="fi fi-social-youtube"></i>
 							</a>
@@ -341,7 +341,7 @@
 
 						<div class="text-muted mt--30">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							We are a great group of guys you are looking for since always: recognized professionals with many years of experience.	
 							</p>
 						</div>
 
