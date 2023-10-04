@@ -1,19 +1,365 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<title>Assignment II - Group Awesome</title>
+	<meta name="description" content="Assignment II - Group Awesome">
+
+	<meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1, user-scalable=0">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+	<!-- up to 10% speed up for external res -->
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<!-- preloading icon font is helping to speed up a little bit -->
+	<link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+
+	<link rel="stylesheet" href="assets/css/core.min.css">
+	<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+
+<!-- favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/logo/logo.svg">
+
 </head>
-<body>
-<h1><span th:text="${catherineAttribute.name}"> </span></h1>
-<br>
-<h3><span th:text="${catherineAttribute.age}"> </span></h3>
-<br>
-<span th:text="${catherineAttribute.bio}"> </span>
-<br>
-<!--how can I add the image attribute of my selfie class to htlm?-->
-<!--<text="${catherineAttribute.image}">-->
-<br>
-<img src="https://raw.githubusercontent.com/camm9/Awesome_Assignment2/catherine_FEATURE/src/main/resources/static/catherine_selfie.jpg" alt="catherine" width="250" height="350">
-</body>
+	<body>
+
+		<div id="wrapper">
+
+
+			<!-- HEADER -->
+			<header id="header" class="shadow-xs">
+
+				<!-- NAVBAR -->
+			<div class="container position-relative">
+
+
+				<nav class="navbar navbar-expand-lg navbar-light justify-content-lg-between justify-content-md-inherit">
+
+					<div class="align-items-start">
+
+						<!-- 
+								Logo : height: 70px max
+							-->
+						<a class="navbar-brand" href="/">
+							<img src="assets/images/logo/logo.svg" width="110" height="70" alt="...">
+						</a>
+
+					</div>
+
+
+
+					<div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
+
+
+						<!-- MOBILE MENU NAVBAR -->
+						<div class="navbar-xs d-none"><!-- .sticky-top -->
+
+							<!-- mobile menu button : close -->
+							<button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
+								data-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<svg width="20" viewBox="0 0 20 20">
+									<path
+										d="M 20.7895 0.977 L 19.3752 -0.4364 L 10.081 8.8522 L 0.7869 -0.4364 L -0.6274 0.977 L 8.6668 10.2656 L -0.6274 19.5542 L 0.7869 20.9676 L 10.081 11.679 L 19.3752 20.9676 L 20.7895 19.5542 L 11.4953 10.2656 L 20.7895 0.977 Z">
+									</path>
+								</svg>
+							</button>
+
+							<!-- 
+									Mobile Menu Logo 
+									Logo : height: 70px max
+								-->
+							<a class="navbar-brand" href="index.html">
+								<img src="assets/images/logo/logo_dark.svg" width="110" height="70" alt="...">
+							</a>
+
+						</div>
+						<!-- /MOBILE MENU NAVBAR -->
+
+
+
+						<!-- NAVIGATION -->
+						<ul class="navbar-nav">
+							<!-- Menu -->
+							<!--
+
+									Dropdown Classes (should be added to primary .dropdown-menu only, dropdown childs are also affected)
+										.dropdown-menu-dark 		- dark dropdown (desktop only, will be white on mobile)
+										.dropdown-menu-hover 		- open on hover
+										.dropdown-menu-clean 		- no background color on hover
+										.dropdown-menu-invert 		- open dropdown in oposite direction (left|right, according to RTL|LTR)
+										.dropdown-menu-uppercase 	- uppercase text (font-size is scalled down to 13px)
+										.dropdown-click-ignore 		- keep dropdown open on inside click (useful on forms inside dropdown)
+
+										Repositioning long dropdown childs (Example: Pages->Account)
+											.dropdown-menu-up-n100 		- open up with top: -100px
+											.dropdown-menu-up-n100 		- open up with top: -150px
+											.dropdown-menu-up-n180 		- open up with top: -180px
+											.dropdown-menu-up-n220 		- open up with top: -220px
+											.dropdown-menu-up-n250 		- open up with top: -250px
+											.dropdown-menu-up 			- open up without negative class
+
+
+										Dropdown prefix icon (optional, if enabled in variables.scss)
+											.prefix-link-icon .prefix-icon-dot 		- link prefix
+											.prefix-link-icon .prefix-icon-line 	- link prefix
+											.prefix-link-icon .prefix-icon-ico 		- link prefix
+											.prefix-link-icon .prefix-icon-arrow 	- link prefix
+
+										.nav-link.nav-link-caret-hide 	- no dropdown icon indicator on main link
+										.nav-item.dropdown-mega 		- required ONLY on fullwidth mega menu
+
+								-->
+							<!-- mobile only image + simple search (d-block d-sm-none) -->
+							<li class="nav-item d-block d-sm-none">
+
+								<!-- image -->
+								<div class="mb-4">
+									<img width="600" height="600" class="img-fluid"
+										src="demo.files/svg/artworks/people_crossbrowser.svg" alt="...">
+								</div>
+
+								<!-- search -->
+								<form method="get" action="#!search"
+									class="input-group-over mb-5 bg-light p-2 form-control-pill">
+									<input type="text" name="keyword" value="" placeholder="Quick search..."
+										class="form-control border-dashed">
+									<button class="btn btn-primary fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
+								</form>
+
+							</li>
+
+
+							<!-- home -->
+							<li class="nav-item dropdown active">
+
+								<a href="/" id="mainNavDocumentation"
+									class="nav-link dropdown-toggle nav-link-caret-hide">
+									<span>Home</span>
+								</a>
+
+								
+							</li>
+
+						</ul>
+						<!-- /NAVIGATION -->
+
+					</div>
+
+				</nav>
+
+			</div>
+			<!-- /NAVBAR -->
+			</header>
+			<!-- /HEADER -->
+
+
+
+
+			<!-- COVER -->
+			<section class="py-5">
+
+				<div class="container min-h-50vh d-middle pt-5"> 
+
+					<div class="row text-center-xs">
+
+						<div class="col-12 col-md-6 pb-3" data-aos="fade-in" data-aos-delay="200">
+
+							<!-- image -->
+							<img width="600" height="400" class="img-fluid rounded-xl" th:src="${catherineAttribute.image}" alt="...">
+
+							<!-- lines, looks like through a glass -->
+							<div class="absolute-full w-100 overflow-hidden opacity-6">
+								<img class="img-fluid" width="1000" height="1000" src="assets/images/masks/shape-line-lense.svg" alt="...">
+							</div>
+
+						</div>
+
+						<div class="col-12 col-md-6 d-middle">
+								
+							<div class="mx-3 my-4" data-aos="fade-in" data-aos-delay="300">
+								
+								<div class="bg-light p-4 rounded-xl">
+
+									<!-- mobile : top arrow : documentation/util-misc.html -->
+									<i class="arrow arrow-lg arrow-top arrow-center border-light d-block d-md-none"></i>
+									<!-- desktop side arrow : documentation/util-misc.html -->
+									<i class="arrow arrow-lg arrow-start mt-3 border-light d-none d-md-inline-block d-lg-inline-block d-xl-inline-block"></i>
+
+									<h1 class="h2-xs font-weight-medium mb-0" th:text=${catherineAttribute.Name}>
+										
+									</h1>
+									
+									<p class="h4 h6-xs font-weight-light mb-4" th:text=${catherineAttribute.rollName}>
+										
+									</p>
+
+<!--									<p class="lead max-w-600" th:text=${CatherineAttribute.bio}>-->
+<!--									</p>-->
+
+
+									<div class="mt-4"> 
+
+										
+
+<!--										<a th:href="${CatherineAttribute.indeedUrl}" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">-->
+<!--											<i class="fi fi-social-linkedin"></i> -->
+<!--										</a>-->
+
+<!--										<a th:href="${CatherineAttribute.githubUrl}" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">-->
+<!--											<i class="fi fi-social-github"></i> -->
+<!--										</a>-->
+
+										
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+			</section>	
+			<!-- /COVER -->
+
+
+
+
+			<!-- QUOTE -->
+			<section class="py-5">
+				<div class="container">
+
+<!--					<blockquote class="blockquote text-center" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">-->
+<!--						<p class="h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted" th:text="${CatherineAttribute.name}">-->
+							
+<!--						</p>-->
+
+<!--						<footer class="blockquote-footer mt-4 fs--25 font-weight-light text-gray-500">-->
+<!--							<cite title="Source Title" th:text = "${CatherineAttribute.bio}"></cite>-->
+<!--						</footer>-->
+<!--					</blockquote>-->
+
+				</div>
+			</section>
+			<!-- /QUOTE -->
+
+
+
+
+
+		<!-- Footer -->
+		<footer id="footer" class="footer-dark">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="bg-distinct col-12 col-md-6 col-lg-4 text-center p-0 py-5">
+
+						<div
+							class="footer-svg-shape position-absolute absolute-top z-index-2 mt--n70 w-100 overflow-hidden pt--5">
+							<svg viewBox="0 0 1440 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="none">
+								<path
+									d="M0 28H1440C1440 28 1154 3.21961e-10 720 1.30487e-09C286 2.28777e-09 0 28 0 28Z">
+								</path>
+							</svg>
+						</div>
+
+						<form method="get" action="/" class="px-4">
+
+							<input type="hidden" name="action" value="subscribe" tabindex="-1">
+
+							<p id="btnAriaFooterFormTitle" class="text-muted">
+								Claim your candy now!
+							</p>
+
+
+							<div class="input-group-over input-group-pill mb-4">
+
+								<input required class="form-control b-0" name="subscriber_email" type="email" value=""
+									placeholder="email address..." aria-label="email address...">
+
+								<button type="submit" class="btn bg-transparent shadow-none" aria-label="subscribe"
+									aria-labelledby="btnAriaFooterFormTitle">
+									<i class="fi fi-send fs--18"></i>
+								</button>
+
+							</div>
+
+
+						</form>
+
+						<div class="mt--12">
+
+							<a href="https://www.facebook.com/" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
+								rel="noopener" aria-label="facebook page">
+								<i class="fi fi-social-facebook"></i>
+							</a>
+
+							<a href="https://twitter.com/" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
+								rel="noopener" aria-label="twitter page">
+								<i class="fi fi-social-twitter"></i>
+							</a>
+
+							<a href="https://www.linkedin.com/" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
+								rel="noopener" aria-label="linkedin page">
+								<i class="fi fi-social-linkedin"></i>
+							</a>
+
+							<a href="https://youtube.com/" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
+								rel="noopener" aria-label="youtube page">
+								<i class="fi fi-social-youtube"></i>
+							</a>
+
+						</div>
+
+					</div>
+
+
+					<div class="col-12 col-md-6 col-lg-8 py-5 fs--15 text-center-xs">
+
+						<h3 class="fs--15 text-muted">SPY US! WE'VE GOT SECRETS!</h3>
+
+						<ul class="mt--30 mb-0 breadcrumb bg-transparent p-0 block-xs">
+							<li class="breadcrumb-item"><a href="/">Contact</a></li>
+							<li class="breadcrumb-item"><a href="/">About Us</a></li>
+							<li class="breadcrumb-item"><a href="/">Terms &amp;
+									Conditions</a></li>
+							<li class="breadcrumb-item"><a href="/">GDPR &amp; Cookies</a></li>
+						</ul>
+
+						<div class="text-muted mt--30">
+							<p>
+							We are a great group of guys you are looking for since always: recognized professionals with many years of experience.	
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		
+
+		</footer>
+		<!-- /Footer -->
+
+
+		</div><!-- /#wrapper -->
+
+		<script src="assets/js/core.min.js"></script>
+		
+	</body>
 </html>

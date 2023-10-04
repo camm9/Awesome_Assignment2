@@ -40,7 +40,7 @@ public class Person {
 		
 	}
 	
-	Person(String bio, String image, String name, int age){
+	public Person(String bio, String image, String name, int age){
 
 		this.bio = bio;
 		this.image = image;
