@@ -2,10 +2,12 @@ package csis3275.model_Awesome;
 
 public class Person {
 	
-	String bio;
-	String image;
-	String name;
-	int age;
+
+	private String bio;
+	private String image;
+	private String name;
+	private int age;
+
 	
 	public String getBio() {
 		return bio;
@@ -33,11 +35,13 @@ public class Person {
 		this.age = age;
 	}
 	
+
 	public Person(){
 		
 	}
 	
-	public Person(String bio, String image, String name, int age){
+	Person(String bio, String image, String name, int age){
+
 		this.bio = bio;
 		this.image = image;
 		this.name = name;
