@@ -25,17 +25,15 @@
 		<link rel="apple-touch-icon" href="assets/images/logo/logo.svg">
 
 </head>
+	<body>
 
-<body class="header-sticky">
-
-	<div id="wrapper">
-
-
-		<!-- HEADER -->
-		<header id="header" class="shadow-xs">
+		<div id="wrapper">
 
 
-			<!-- NAVBAR -->
+			<!-- HEADER -->
+			<header id="header" class="shadow-xs">
+
+				<!-- NAVBAR -->
 			<div class="container position-relative">
 
 
@@ -139,7 +137,7 @@
 							<!-- home -->
 							<li class="nav-item dropdown active">
 
-								<a href="/"
+								<a href="/" id="mainNavDocumentation"
 									class="nav-link dropdown-toggle nav-link-caret-hide">
 									<span>Home</span>
 								</a>
@@ -156,155 +154,105 @@
 
 			</div>
 			<!-- /NAVBAR -->
-
-		</header>
-		<!-- /HEADER -->
-
+			</header>
+			<!-- /HEADER -->
 
 
 
-		<!-- INTRO -->
-		<section class="py-5">
 
-			<div class="container min-h-50vh pt-5">
+			<!-- COVER -->
+			<section class="py-5">
 
-				<div class="row text-center-xs d-middle">
+				<div class="container min-h-50vh d-middle pt-5"> 
 
-					<div class="col-12 col-md-6 order-2 order-md-1 pb-5" data-aos="fade-up" data-aos-delay="0">
+					<div class="row text-center-xs">
 
-						<div class="mb-5">
+						<div class="col-12 col-md-6 pb-3" data-aos="fade-in" data-aos-delay="200">
 
-							<h1 class="h2-xs font-weight-light mb-0">
-								<span class="text-primary font-weight-medium">Awesome</span> Team
-							</h1>
+							<!-- image -->
+							<img width="600" height="400" class="img-fluid rounded-xl" th:src="${echobj.image}" alt="...">
 
-							<p class="h3 h4-xs font-weight-medium mb-4">
-								Professionals &bull; Seniors Dev /Ops
-							</p>
-
-							<p class="lead">
-							We are a great group of guys you are looking for since always: recognized professionals with many years of experience.	
-							</p>
+							<!-- lines, looks like through a glass -->
+							<div class="absolute-full w-100 overflow-hidden opacity-6">
+								<img class="img-fluid" width="1000" height="1000" src="assets/images/masks/shape-line-lense.svg" alt="...">
+							</div>
 
 						</div>
 
+						<div class="col-12 col-md-6 d-middle">
+								
+							<div class="mx-3 my-4" data-aos="fade-in" data-aos-delay="300">
+								
+								<div class="bg-light p-4 rounded-xl">
+
+									<!-- mobile : top arrow : documentation/util-misc.html -->
+									<i class="arrow arrow-lg arrow-top arrow-center border-light d-block d-md-none"></i>
+									<!-- desktop side arrow : documentation/util-misc.html -->
+									<i class="arrow arrow-lg arrow-start mt-3 border-light d-none d-md-inline-block d-lg-inline-block d-xl-inline-block"></i>
+
+									<h1 class="h2-xs font-weight-medium mb-0" th:text = ${echobj.Name}>
+										
+									</h1>
+									
+									<p class="h4 h6-xs font-weight-light mb-4" th:text = ${echobj.rollName}>
+										
+									</p>
+
+									<p class="lead max-w-600"  th:text = ${echobj.bio}>
+									</p>
+
+
+									<div class="mt-4"> 
+
+										
+
+										<a th:href="${echobj.indeedUrl}" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">
+											<i class="fi fi-social-linkedin"></i> 
+										</a>
+
+										<a th:href="${echobj.githubUrl}" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">
+											<i class="fi fi-social-github"></i> 
+										</a>
+
+										
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
 					</div>
 
-					<div class="col-12 col-md-6 order-1 order-md-2 pb-5" data-aos="fade-up" data-aos-delay="200">
-
-						<!-- svg image -->
-						<img width="600" height="400" class="img-fluid" src="assets/images/images/crm_1.svg"
-							alt="Group Awesome">
-
-					</div>
 
 				</div>
 
-
-			</div>
-
-		</section>
-		<!-- /INTRO -->
+			</section>	
+			<!-- /COVER -->
 
 
 
 
-		<!-- start :: team -->
-		<section class="bg-theme-color-light">
-			<div class="container">
+			<!-- QUOTE -->
+			<section class="py-5">
+				<div class="container">
 
+					<blockquote class="blockquote text-center" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">
+						<p class="h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted" th:text="${echobj.name}">
+							
+						</p>
 
-				<div class="text-center mb-5">
-					<span
-						class="badge badge-pill badge-primary badge-soft font-weight-light pl-2 pr-2 pt--6 pb--6 mb-2">
-						PROFESSIONALS
-					</span>
-					<h2 class="font-weight-normal">
-						Meet our
-
-						<!-- typed -->
-						<span class="typed text-primary" data-typed-string="team|professionals|seniors"
-							data-typed-speed-forward="80" data-typed-speed-back="30" data-typed-back-delay="700"
-							data-typed-loop-times="infinite" data-typed-smart-backspace="true"
-							data-typed-shuffle="false" data-typed-cursor="|"></span>
-
-					</h2>
-				</div>
-
-
-				<div class="row">
-
-					<div class="col-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-
-						<a href="ech-72"
-							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
-							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/ech-72.jpg"
-								alt="...">
-							<div class="px-2 py-3">
-								<h5 class="mb-0">Edison</h5>
-								<p class="mb-0">Lead / Dev /Ops</p>
-							</div>
-						</a>
-
-					</div>
-
-					<div class="col-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-
-						<a href="profile"
-							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
-							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/using_product.svg"
-								alt="...">
-							<div class="px-2 py-3">
-								<h5 class="mb-0">Catherine</h5>
-								<p class="mb-0">Dev / Security Analyst</p>
-							</div>
-						</a>
-
-					</div>
-
-
-					<div class="col-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-
-						<a href="profile"
-							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
-							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/using_product.svg"
-								alt="...">
-							<div class="px-2 py-3">
-								<h5 class="mb-0">Jaimin Shah</h5>
-								<p class="mb-0">DB Manager / Dev</p>
-							</div>
-						</a>
-
-					</div>
-
-
-
-
-					<div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
-
-						<a href="wva-06"
-							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
-							<img class="img-fluid rounded"
-								src="assets/images/images/wva-06.jpg"
-								alt="...">
-							<div class="px-2 py-3">
-								<h5 class="mb-0">Washington Valencia</h5>
-								<p class="mb-0">Dev / Ops</p>
-							</div>
-						</a>
-
-					</div>
-
-					
+						<footer class="blockquote-footer mt-4 fs--25 font-weight-light text-gray-500">
+							<cite title="Source Title" th:text = "${echobj.bio}"></cite>
+						</footer>
+					</blockquote>
 
 				</div>
-
-			</div>
-		</section>
-		<!-- end :: team -->
+			</section>
+			<!-- /QUOTE -->
 
 
 
@@ -376,7 +324,6 @@
 
 						</div>
 
-
 					</div>
 
 
@@ -394,8 +341,8 @@
 
 						<div class="text-muted mt--30">
 							<p>
-						We are a great group of guys you are looking for since always: recognized professionals with many years of experience.	
-								</p>
+							We are a great group of guys you are looking for since always: recognized professionals with many years of experience.	
+							</p>
 						</div>
 
 					</div>
@@ -410,10 +357,9 @@
 		<!-- /Footer -->
 
 
-	</div><!-- /#wrapper -->
+		</div><!-- /#wrapper -->
 
-	<script src="assets/js/core.min.js"></script>
-
-</body>
-
+		<script src="assets/js/core.min.js"></script>
+		
+	</body>
 </html>

@@ -11,7 +11,7 @@ public class Controller_Awesome {
 	
 	
 	private TeamMember_awesome wva_06_object = new TeamMember_awesome();
-	
+	private TeamMember_awesome ech_72_object= new TeamMember_awesome();
 	public Controller_Awesome() {
 		
 		wva_06_object.setIndeedUrl("https://www.linkedin.com/in/washington-eduardo-valencia-1ab8aa189/");
@@ -21,6 +21,19 @@ public class Controller_Awesome {
 		wva_06_object.setName("Washington Valencia");
 		wva_06_object.setImage("assets/images/images/wva-06.jpg");
 		wva_06_object.setBio("Entrepreneur, passionate, enthusiastic with high knowledge of IT and good leadership skills. In continuous professional training. Always adaptable and with all the desire to grow and learn.");
+		InstantiateEdiObject();
+	}
+	
+	
+	private void InstantiateEdiObject() //move Edison instantiation down for better code readability 
+	{
+		ech_72_object.setIndeedUrl("https://www.linkedin.com/in/wai-cheung-chan-441687b0");
+		ech_72_object.setGithubUrl("https://github.com/WCEdison");
+		ech_72_object.setAge(28);
+		ech_72_object.setRollName("Lead/Dev/Ops");
+		ech_72_object.setName("Edison CHAN");
+		ech_72_object.setImage("assets/images/images/ech-72.jpg");
+		ech_72_object.setBio("A energetic and socialable programmer and entrepreneur. Co-founder and former chief engineer of Ed-Tech Startup Dot Dot Fire Limited. Welcome challenges or failings as long as he can fail forward.");
 		
 	}
 	
@@ -36,5 +49,13 @@ public class Controller_Awesome {
 		model.addAttribute("wvaobj", wva_06_object);
 
 		return "wva-06";
+	}
+	
+	@GetMapping("/ech-72")
+	public String renderEdiProfilePage(Model model) {
+			
+		model.addAttribute("echobj", ech_72_object);
+
+		return "ech-72";
 	}
 }
