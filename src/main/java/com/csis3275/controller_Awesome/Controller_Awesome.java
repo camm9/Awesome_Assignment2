@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import csis3275.model_Awesome.Student_wva_06;
+import com.csis3275.model_Awesome.Student_wva_06;
 
 @Controller
 public class Controller_Awesome {
