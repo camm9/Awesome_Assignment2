@@ -6,17 +6,15 @@ public class Student_wva_06 extends Person{
 	private String indeedUrl;
 	private String githubUrl;
 	
-	
-	String bio;
-	String image;
-	String name;
-	int age;
-	
 	public Student_wva_06(String bio, String image, String name, int age, String rollName,  String indeedUrl, String githubUrl) {
 		super();
 		this.rollName = rollName;
 		this.indeedUrl = indeedUrl;
 		this.githubUrl = githubUrl;
+	}
+	
+	public Student_wva_06(){
+		
 	}
 
 	public String getRollName() {
