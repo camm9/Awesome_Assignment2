@@ -10,16 +10,16 @@ public class TeamMember_awesome {
 	private String linkedinUrl;
 	private String githubUrl;
 	
-	public String getRollName() {
+	public String getRoleName() {
 		return roleName;
 	}
-	public void setRollName(String rollName) {
+	public void setRoleName(String rollName) {
 		this.roleName = rollName;
 	}
-	public String getIndeedUrl() {
+	public String getlinkedinUrl() {
 		return linkedinUrl;
 	}
-	public void setIndeedUrl(String indeedUrl) {
+	public void setlinkedinUrl(String indeedUrl) {
 		this.linkedinUrl = indeedUrl;
 	}
 	public String getGithubUrl() {
