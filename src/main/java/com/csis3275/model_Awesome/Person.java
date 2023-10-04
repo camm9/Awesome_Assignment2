@@ -6,21 +6,21 @@ public class Person {
 	private String image;
 	private String name;
 	private int age;
-	private String rollName;
-	private String indeedUrl;
+	private String roleName;
+	private String linkedinUrl;
 	private String githubUrl;
 	
 	public String getRollName() {
-		return rollName;
+		return roleName;
 	}
 	public void setRollName(String rollName) {
-		this.rollName = rollName;
+		this.roleName = rollName;
 	}
 	public String getIndeedUrl() {
-		return indeedUrl;
+		return linkedinUrl;
 	}
 	public void setIndeedUrl(String indeedUrl) {
-		this.indeedUrl = indeedUrl;
+		this.linkedinUrl = indeedUrl;
 	}
 	public String getGithubUrl() {
 		return githubUrl;
@@ -62,8 +62,8 @@ public class Person {
 		this.image = image;
 		this.name = name;
 		this.age = age;
-		this.rollName = rollName;
-		this.indeedUrl = indeedUrl;
+		this.roleName = rollName;
+		this.linkedinUrl = indeedUrl;
 		this.githubUrl = githubUrl;
 	}
 //Edi: Constructor empty
