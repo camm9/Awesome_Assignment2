@@ -26,6 +26,7 @@ public class Controller_Awesome {
 				"Entrepreneur, passionate, enthusiastic with high knowledge of IT and good leadership skills. In continuous professional training. Always adaptable and with all the desire to grow and learn.");
 		InstantiateEdiObject();
 		InstantiateCatherineObject();
+		InstantiateJaiminObject();
 	}
 
 	private void InstantiateEdiObject() // move Edison instantiation down for better code readability
@@ -57,9 +58,7 @@ public class Controller_Awesome {
 	
 	private void InstantiateJaiminObject()  
 	{
-		jsh_35_object.setLinkedinUrl("https://www.linkedin.com/in/jaiminshah2\r\n"
-				+ "\r\n"
-				+ "");
+		jsh_35_object.setLinkedinUrl("https://www.linkedin.com/in/jaiminshah2");
 		jsh_35_object.setGithubUrl("https://https://github.com/jaik27");
 		jsh_35_object.setAge(26);
 		jsh_35_object.setRoleName("DB Manager/Dev");
@@ -95,7 +94,7 @@ public class Controller_Awesome {
 	}
 	
 	@GetMapping("/jsh-35")
-	public String renderProfilePage(Model model) {
+	public String renderRSHProfilePage(Model model) {
 
 		model.addAttribute("jshobj", jsh_35_object);
 
