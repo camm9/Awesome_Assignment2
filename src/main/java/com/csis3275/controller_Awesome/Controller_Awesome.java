@@ -13,8 +13,7 @@ public class Controller_Awesome {
 	private TeamMember_awesome wva_06_object = new TeamMember_awesome();
 	private TeamMember_awesome ech_72_object = new TeamMember_awesome();
 	private TeamMember_awesome cme_00_object = new TeamMember_awesome();
-	private TeamMember_awesome jsh_35_object = new TeamMember_awesome();
-
+    private TeamMember_awesome jsh_35_object = new TeamMember_awesome();
 	public Controller_Awesome() {
 
 		wva_06_object.setLinkedinUrl("https://www.linkedin.com/in/washington-eduardo-valencia-1ab8aa189/");
