@@ -13,7 +13,6 @@ public class Controller_Awesome {
 	private TeamMember_awesome wva_06_object = new TeamMember_awesome();
 	private TeamMember_awesome ech_72_object = new TeamMember_awesome();
 	private TeamMember_awesome cme_00_object = new TeamMember_awesome();
-	private TeamMember_awesome jsh_35_object = new TeamMember_awesome();
 
 	public Controller_Awesome() {
 
@@ -55,28 +54,12 @@ public class Controller_Awesome {
 
 		
 	}
-	
-	private void InstantiateJaiminObject()  
-	{
-		jsh_35_object.setLinkedinUrl("https://www.linkedin.com/in/jaiminshah2\r\n"
-				+ "\r\n"
-				+ "");
-		jsh_35_object.setGithubUrl("https://https://github.com/jaik27");
-		jsh_35_object.setAge(26);
-		jsh_35_object.setRoleName("DB Manager/Dev");
-		jsh_35_object.setName("Jaimin Shah");
-		jsh_35_object.setImage("assets/images/images/jsh-35.jpg");
-		jsh_35_object.setBio(
-				"Aerospace Engineer");
-
-	}
 
 	@GetMapping("/")
 	public String renderHome(Model model) {
 		model.addAttribute("wvaobj", wva_06_object);
 		model.addAttribute("echobj", ech_72_object);
 		model.addAttribute("cmeobj", cme_00_object);
-		model.addAttribute("jshobj", jsh_35_object);
 		return "home";
 	}
 	
@@ -93,14 +76,6 @@ public class Controller_Awesome {
 		model.addAttribute("wvaobj", wva_06_object);
 
 		return "wva-06";
-	}
-	
-	@GetMapping("/jsh-35")
-	public String renderProfilePage(Model model) {
-
-		model.addAttribute("jshobj", wva_06_object);
-
-		return "jsh-35";
 	}
 
 	@GetMapping("/ech-72")
