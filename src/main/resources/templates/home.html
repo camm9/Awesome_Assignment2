@@ -265,14 +265,14 @@
 
 					<div class="col-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="0">
 
-						<a href="profile"
+						<a href="jsh-35"
 							class="d-block bg-white rounded p-2 shadow-primary-xs text-dark text-decoration-none transition-hover-top transition-all-ease-250">
 							<img class="w-100 img-fluid rounded"
-								src="assets/images/images/jay.jpg"
+							    th:src="${jshobj.image}"
 								alt="...">
 							<div class="px-2 py-3">
-								<h5 class="mb-0">Jaimin Shah</h5>
-								<p class="mb-0">DB Manager / Dev</p>
+								<h5 class="mb-0" th:text=${jshobj.Name}></h5>
+								<p class="mb-0" th:text=$jshobj.roleName}></p>
 							</div>
 						</a>
 

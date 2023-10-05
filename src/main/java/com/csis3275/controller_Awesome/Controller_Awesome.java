@@ -65,7 +65,7 @@ public class Controller_Awesome {
 		jsh_35_object.setAge(26);
 		jsh_35_object.setRoleName("DB Manager/Dev");
 		jsh_35_object.setName("Jaimin Shah");
-		jsh_35_object.setImage("assets/images/images/jsh-35.jpg");
+		jsh_35_object.setImage("assets/images/images/jsh-35.jpeg");
 		jsh_35_object.setBio(
 				"Aerospace Engineer");
 
@@ -98,7 +98,7 @@ public class Controller_Awesome {
 	@GetMapping("/jsh-35")
 	public String renderProfilePage(Model model) {
 
-		model.addAttribute("jshobj", wva_06_object);
+		model.addAttribute("jshobj", jsh_35_object);
 
 		return "jsh-35";
 	}
